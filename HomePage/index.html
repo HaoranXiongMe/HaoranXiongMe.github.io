@@ -210,6 +210,11 @@
       display: block;
     }
 
+    /* 小图标默认隐藏 */
+    .crab-mobile-icon {
+      display: none;
+    }
+
     .pill-link,
     .mini-link {
       display: inline-flex;
@@ -587,7 +592,7 @@
 
     @media (max-width: 560px) {
       h1 {
-        font-size: 34px;
+        font-size: 30px;
       }
 
       h2 {
@@ -600,8 +605,8 @@
       }
 
       .identity-en {
-        font-size: 2px !important;
-        color: red;
+        font-size: 15.5px;
+        /* color: red; */
       }
 
       .links {
@@ -615,6 +620,39 @@
 
       .publication-cover-wrap {
         height: 190px;
+      }
+
+      /* =========================
+     CRAB mobile layout
+     ========================= */
+
+      .crab-header {
+        display: block;
+        width: 100%;
+      }
+
+      .crab-header-text {
+        width: 100%;
+        min-width: 0;
+      }
+
+      /* Hide CRAB icon on mobile */
+      .crab-icon-wrap {
+        display: none;
+      }
+
+      /* 标题保持同一行对齐 */
+      .crab-mobile-title {
+        display: block;
+      }
+
+      /* 显示小螃蟹 */
+      .crab-mobile-icon {
+        display: inline-block;
+        height: 1em;
+        width: auto;
+        flex-shrink: 0;
+        object-fit: contain;
       }
     }
   </style>
@@ -682,8 +720,14 @@
         <div>
           <div class="crab-header">
             <div class="crab-header-text">
-              <div class="item-title">
+              <div class="item-title crab-mobile-title">
+                
                 CRAB: Cuboid-based Representation for As-built BIM from Point Clouds
+                <img
+                  src="assets/crab_icon_1.png"
+                  alt="CRAB icon"
+                  class="crab-mobile-icon"
+                >
               </div>
 
               <div class="authors">
